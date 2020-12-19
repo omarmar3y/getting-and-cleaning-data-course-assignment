@@ -36,3 +36,12 @@ ever activity for every subject of:
 
 mean(): Mean value
 std(): Standard deviation
+
+##steps
+1 - downleaded the data and unzipped it 
+2 - merged the subject , test , train and activity  
+3 - extracted the columns with means and standardeviation
+4 - renamed the extracted columns with there names from the features file
+5 - changed the activity from numbers to factor with descriptive lables 
+6 - grouped the data by the activity and subject and calculated the mean for every group and put it in new set
+7 - saved the the new data in means_set.txt file 

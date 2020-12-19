@@ -1,10 +1,11 @@
 library(dplyr)
 ## setwd() to the directory where you want to download the data
-
-
-
-download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip','./uci_dataset.zip')
-unzip('uci_dataset.zip')
+filename <- 'uci_dataset.zip'
+if(!file.exists(filename)){
+download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip',filename,method = 'curl')
+}
+  
+unzip(filename)
 
 xtrain <- read.table('UCI HAR Dataset/train/X_train.txt')
 ytrain <- read.table('UCI HAR Dataset/train/y_train.txt')
